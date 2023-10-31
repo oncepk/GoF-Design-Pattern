@@ -7,7 +7,7 @@ export class Gashapon {
   private coins = 0;
   private state: GashaponMachineState = GashaponMachineState.outOfCapsule;
 
-  // -------------------- State methods
+  // TODO : -------------------- State methods
 
   insertCoin() {
     if (this.state === GashaponMachineState.readyToSpin) {

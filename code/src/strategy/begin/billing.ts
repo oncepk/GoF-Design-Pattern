@@ -21,7 +21,10 @@ export class Billing {
       total = 500;
     } else if (this.packageType === PackageType.HOUR_FLEX) {
       total = this.totalHours * 50;
-    } else total = 0;
+    } else if (this.packageType === PackageType.STEPPING) {
+      total = 0;
+    }
+    else total = 0;
 
     return total + (total * this.vatRate) / 100;
   }
